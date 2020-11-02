@@ -1,23 +1,39 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "../views/first_touch/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/",
+    path: "/Home",
     name: "Home",
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/grid",
+    name: "Grid",
+    component: () => import(/* webpackChunkName: "about" */ "../views/first_touch/Grid.vue")
+  },
+  {
+    path: "/botoes",
+    name: "Botoes",
+    component: () => import(/* webpackChunkName: "about" */ "../views/first_touch/Botoes.vue")
+  },
+  {
+    path: "/cards",
+    name: "Cards",
+    component: () => import(/* webpackChunkName: "about" */ "../views/first_touch/Cards.vue")
+  },
+  {
+    path: "/modals",
+    name: "Modals",
+    component: () => import(/* webpackChunkName: "about" */ "../views/first_touch/Modals.vue")
+  },
+  {
+    path: "/tasks",
+    name: "Tasks",
+    component: () => import(/* webpackChunkName: "about" */ "../views/first_touch/Tasks.vue")
   }
 ];
 
